@@ -244,7 +244,15 @@ export default function QuizApp() {
                 >
                   <XAxis dataKey="index" />
                   <YAxis domain={[0, 100]} />
-                  <Tooltip formatter={(value) => `${value}%`} />
+                  <Tooltip
+                    formatter={(value) => `${value}%`}
+                    contentStyle={{
+                      backgroundColor: "#fff",
+                      borderColor: "#ccc",
+                      color: "#000",
+                    }}
+                    labelStyle={{ color: "#000" }}
+                  />
                   <Line
                     type="monotone"
                     dataKey="accuracy"
@@ -343,7 +351,15 @@ export default function QuizApp() {
               >
                 <XAxis dataKey="index" />
                 <YAxis domain={[0, 100]} />
-                <Tooltip formatter={(value) => `${value}%`} />
+                <Tooltip
+                  formatter={(value) => `${value}%`}
+                  contentStyle={{
+                    backgroundColor: "#fff",
+                    borderColor: "#ccc",
+                    color: "#000",
+                  }}
+                  labelStyle={{ color: "#000" }}
+                />
                 <Line
                   type="monotone"
                   dataKey="accuracy"

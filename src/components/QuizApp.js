@@ -164,7 +164,7 @@ export default function QuizApp() {
             <div key={year}>
               <button
                 onClick={() => toggleYear(parseInt(year))}
-                className="w-full px-4 py-2 dark:bg-gray-600 bg-gray-100 hover:bg-gray-200 font-medium flex justify-between items-center"
+                className="w-full px-4 py-2 dark:bg-gray-600 dark:hover:bg-gray-700 bg-gray-200 hover:bg-gray-300 font-medium flex justify-between items-center"
               >
                 <span>{year}</span> <span className="text-xs">{year === "2020" ? "\u26A0\uFE0F GPT 4.1 extraction not upto the mark" : ""}</span>
                 <span>{isExpanded ? "▲" : "▼"}</span>

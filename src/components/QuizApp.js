@@ -156,7 +156,7 @@ export default function QuizApp() {
         </div>
   
         <div className="space-y-4 mb-4">
-        {Object.entries(groupedByYear).map(([year, weeksSet]) => {
+        {Object.entries(groupedByYear).sort(([yearA], [yearB]) => yearB - yearA).map(([year, weeksSet]) => {
           const weeks = [...weeksSet].sort((a, b) => a - b);
           const isExpanded = expandedYears.includes(parseInt(year));
 

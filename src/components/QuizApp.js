@@ -22,7 +22,7 @@ export default function QuizApp() {
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [scoreHistory, setScoreHistory] = useState([]);
   const [showHistory, setShowHistory] = useState(false);
-  const [tab, setTab] = useState("correct");
+  const [tab, setTab] = useState("wrong");
   const [selectedWeeks, setSelectedWeeks] = useState([]);
   const [availableWeeks, setAvailableWeeks] = useState([]);
   const [quizStarted, setQuizStarted] = useState(false);
@@ -52,7 +52,7 @@ export default function QuizApp() {
 
   const handleAnswer = (selected) => {
     const isCorrect = selected === questions[current].correct_answer;
-    setAttempted(attempted + 1);
+    setAttempted((attempted) => attempted + 1);
     if (isCorrect) setScore((prev) => prev + 1);
     setAnswers((prev) => [
       ...prev,
@@ -61,8 +61,10 @@ export default function QuizApp() {
     if (current + 1 < questions.length) {
       setCurrent((prev) => prev + 1);
     } else {
-      handleSubmitQuiz(true);
-    }
+      const finalAttempted = attempted + 1;
+      const finalScore = isCorrect ? score + 1 : score;
+      handleSubmitQuiz(true, finalScore, finalAttempted);
+    }    
   };
 
   const handleSkip = () => {
@@ -77,22 +79,21 @@ export default function QuizApp() {
     }
   };
 
-  const handleSubmitQuiz = (auto = false) => {
+  const handleSubmitQuiz = (auto = false, finalScore = score, finalAttempted = attempted) => {
     setQuizCompleted(true);
-    const totalAnswered = attempted;
-    const accuracy = totalAnswered > 0 ? (score / totalAnswered) * 100 : 0;
+    const accuracy = finalAttempted > 0 ? (finalScore / finalAttempted) * 100 : 0;
     const updatedHistory = [
       ...scoreHistory,
       {
         date: new Date().toLocaleString(),
-        score,
-        total: totalAnswered,
+        score: finalScore,
+        total: finalAttempted,
         accuracy: accuracy.toFixed(2),
       },
     ];
     setScoreHistory(updatedHistory);
     localStorage.setItem("scoreHistory", JSON.stringify(updatedHistory));
-  };
+  };  
 
   const clearHistory = () => {
     localStorage.removeItem("scoreHistory");
@@ -244,6 +245,12 @@ export default function QuizApp() {
       setQuizCompleted(false)
       setQuizStarted(false)
       setSelectedWeeks([])
+      setCurrent(0)
+      setScore(0)
+      setAttempted(0)
+      setAnswers([])
+      setShowHistory(false)
+      setAvailableWeeks([])
     }
 
     return (

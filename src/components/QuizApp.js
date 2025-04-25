@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import questionData from "../data/data.json";
 import {
   LineChart,
@@ -24,14 +24,10 @@ export default function QuizApp() {
   const [showHistory, setShowHistory] = useState(false);
   const [tab, setTab] = useState("wrong");
   const [selectedWeeks, setSelectedWeeks] = useState([]);
-  const [availableWeeks, setAvailableWeeks] = useState([]);
   const [quizStarted, setQuizStarted] = useState(false);
   const [expandedYears, setExpandedYears] = useState([]);
+  const quizStartTimeRef = useRef(null);
 
-  useEffect(() => {
-    const weeks = [...new Set(questionData.map((q) => q.week))];
-    setAvailableWeeks(weeks);
-  }, []);
 
   const startQuiz = () => {
     const yearWeekId = (year, week) => year * 100 + week;
@@ -45,6 +41,9 @@ export default function QuizApp() {
     }));
     setQuestions(shuffled);
     setQuizStarted(true);
+
+    // Start timer
+    quizStartTimeRef.current = Date.now();
 
     const storedScores = JSON.parse(localStorage.getItem("scoreHistory")) || [];
     setScoreHistory(storedScores);
@@ -82,11 +81,19 @@ export default function QuizApp() {
   const handleSubmitQuiz = (auto = false, finalScore = score, finalAttempted = attempted) => {
     setQuizCompleted(true);
     const accuracy = finalAttempted > 0 ? (finalScore / finalAttempted) * 100 : 0;
+
+    const durationMs = quizStartTimeRef.current ? Date.now() - quizStartTimeRef.current : 0;
+    const totalSeconds = Math.floor(durationMs / 1000);
+    const minutes = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
+    const seconds = (totalSeconds % 60).toString().padStart(2, '0');
+    const formattedDuration = `${minutes}:${seconds}`;
+
     const updatedHistory = [
       ...scoreHistory,
       {
         date: new Date().toLocaleString(),
         score: finalScore,
+        duration: formattedDuration,
         total: finalAttempted,
         accuracy: accuracy.toFixed(2),
       },
@@ -250,7 +257,6 @@ export default function QuizApp() {
       setAttempted(0)
       setAnswers([])
       setShowHistory(false)
-      setAvailableWeeks([])
     }
 
     return (
@@ -382,6 +388,9 @@ export default function QuizApp() {
                       <span>{entry.date}</span>
                       <span className="font-semibold">
                         {entry.score}/{entry.total} ({entry.accuracy}%)
+                      </span>
+                      <span className="font-semibold">
+                        {entry.duration}
                       </span>
                     </li>
                   ))}

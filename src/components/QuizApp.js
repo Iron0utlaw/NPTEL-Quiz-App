@@ -287,7 +287,7 @@ export default function QuizApp() {
 
         <button
           onClick={() => setShowHistory(true)}
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition"
+          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition mb-4"
         >
           View Score History
         </button>
@@ -391,8 +391,6 @@ export default function QuizApp() {
     );
   }
 
-  console.log(questions)
-
   if (questions.length === 0)
     return <div className="text-center mt-10">Loading...</div>;
 
@@ -426,14 +424,6 @@ export default function QuizApp() {
             className="w-full border border-gray-300 hover:bg-slate-500 hover:text-white text-gray-800 dark:text-gray-100 font-medium py-2 px-4 rounded-lg transition"
           >
             Skip
-          </button>
-        </div>
-        <div className="mt-4">
-          <button
-            onClick={() => setShowHistory(true)}
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition"
-          >
-            View Score History
           </button>
         </div>
       </div>

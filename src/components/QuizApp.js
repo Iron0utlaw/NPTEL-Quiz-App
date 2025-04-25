@@ -84,16 +84,13 @@ export default function QuizApp() {
 
     const durationMs = quizStartTimeRef.current ? Date.now() - quizStartTimeRef.current : 0;
     const totalSeconds = Math.floor(durationMs / 1000);
-    const minutes = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
-    const seconds = (totalSeconds % 60).toString().padStart(2, '0');
-    const formattedDuration = `${minutes}:${seconds}`;
 
     const updatedHistory = [
       ...scoreHistory,
       {
         date: new Date().toLocaleString(),
         score: finalScore,
-        duration: formattedDuration,
+        // duration: totalSeconds,
         total: finalAttempted,
         accuracy: accuracy.toFixed(2),
       },
@@ -101,6 +98,12 @@ export default function QuizApp() {
     setScoreHistory(updatedHistory);
     localStorage.setItem("scoreHistory", JSON.stringify(updatedHistory));
   };  
+
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
+  };
 
   const clearHistory = () => {
     localStorage.removeItem("scoreHistory");
@@ -355,31 +358,63 @@ export default function QuizApp() {
                 </button>
               </div>
               <ResponsiveContainer width="100%" height={200}>
-                <LineChart
-                  data={scoreHistory.map((entry, i) => ({
-                    ...entry,
-                    index: i + 1,
-                    accuracy: parseFloat(entry.accuracy),
-                  }))}
-                >
-                  <XAxis dataKey="index" />
-                  <YAxis domain={[0, 100]} />
-                  <Tooltip
-                    formatter={(value) => `${value}%`}
-                    contentStyle={{
-                      backgroundColor: "#fff",
-                      borderColor: "#ccc",
-                      color: "#000",
-                    }}
-                    labelStyle={{ color: "#000" }}
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="accuracy"
-                    stroke="#3182ce"
-                    strokeWidth={2}
-                  />
-                </LineChart>
+              <LineChart
+                data={scoreHistory.map((entry, i) => ({
+                  ...entry,
+                  index: i + 1,
+                  accuracy: parseFloat(entry.accuracy),
+                  duration: parseFloat(entry.duration),
+                }))}
+              >
+                <XAxis dataKey="index" />
+                
+                {/* Left Y-Axis for Accuracy */}
+                <YAxis yAxisId="left" domain={[0, 100]} />
+                
+                {/* Right Y-Axis for Duration */}
+                <YAxis
+                  yAxisId="right"
+                  orientation="right"
+                  domain={['auto', 'auto']}
+                  tickFormatter={(value) => `${value}s`}
+                />
+
+                <Tooltip
+                  formatter={(value, name, props) => {
+                    const key = props.dataKey
+                    if (key === "accuracy") return [`${value}%`, "Accuracy"];
+                    if (key === "duration") return [`${value}s`, "Duration"];
+                    return [value, name];
+                  }}
+                  contentStyle={{
+                    backgroundColor: "#fff",
+                    borderColor: "#ccc",
+                    color: "#000",
+                  }}
+                  labelStyle={{ color: "#000" }}
+                />
+
+                {/* Accuracy Line (left axis) */}
+                <Line
+                  yAxisId="left"
+                  type="monotone"
+                  dataKey="accuracy"
+                  stroke="#3182ce"
+                  strokeWidth={2}
+                  name="Accuracy"
+                />
+
+                {/* Duration Line (right axis) */}
+                <Line
+                  yAxisId="right"
+                  type="monotone"
+                  dataKey="duration"
+                  stroke="#e53e3e"
+                  strokeWidth={2}
+                  name="Duration"
+                />
+              </LineChart>
+
               </ResponsiveContainer>
               <div className="overflow-scroll max-h-96">
                 <ul className="space-y-2 text-sm mt-4">
@@ -390,7 +425,7 @@ export default function QuizApp() {
                         {entry.score}/{entry.total} ({entry.accuracy}%)
                       </span>
                       <span className="font-semibold">
-                        {entry.duration}
+                        {formatTime(entry.duration)}
                       </span>
                     </li>
                   ))}

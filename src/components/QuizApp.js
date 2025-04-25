@@ -90,7 +90,7 @@ export default function QuizApp() {
       {
         date: new Date().toLocaleString(),
         score: finalScore,
-        // duration: totalSeconds,
+        duration: totalSeconds,
         total: finalAttempted,
         accuracy: accuracy.toFixed(2),
       },

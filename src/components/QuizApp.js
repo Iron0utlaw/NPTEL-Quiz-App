@@ -146,7 +146,7 @@ export default function QuizApp() {
   
     return (
       <div className="p-4 max-w-md mx-auto">
-        <h2 className="text-2xl font-semibold mb-4 text-center">Select Weeks</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-center">Select MIPT Weeks</h2>
   
         <div className="flex justify-between mb-4">
           <button
@@ -237,10 +237,113 @@ export default function QuizApp() {
         <button
           disabled={selectedWeeks.length === 0}
           onClick={startQuiz}
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition disabled:bg-gray-400"
+          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition disabled:bg-gray-400 mb-4 mt-4"
         >
           Start Quiz
         </button>
+
+        <button
+          onClick={() => setShowHistory(true)}
+          className="w-full border-2 text-white font-medium py-2 px-4 rounded-lg transition"
+        >
+          View Score History
+        </button>
+
+        {showHistory && (
+          <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg w-96">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-lg font-semibold">Score History</h2>
+                <button
+                  onClick={clearHistory}
+                  className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-lg text-sm"
+                >
+                  Clear History
+                </button>
+              </div>
+              <ResponsiveContainer width="100%" height={200}>
+              <LineChart
+                data={scoreHistory.map((entry, i) => ({
+                  ...entry,
+                  index: i + 1,
+                  accuracy: parseFloat(entry.accuracy),
+                  duration: parseFloat(entry.duration),
+                }))}
+              >
+                <XAxis dataKey="index" />
+                
+                {/* Left Y-Axis for Accuracy */}
+                <YAxis yAxisId="left" domain={[0, 100]} />
+                
+                {/* Right Y-Axis for Duration */}
+                <YAxis
+                  yAxisId="right"
+                  orientation="right"
+                  domain={['auto', 'auto']}
+                  tickFormatter={(value) => `${value}s`}
+                />
+
+                <Tooltip
+                  formatter={(value, name, props) => {
+                    const key = props.dataKey
+                    if (key === "accuracy") return [`${value}%`, "Accuracy"];
+                    if (key === "duration") return [`${value}s`, "Duration"];
+                    return [value, name];
+                  }}
+                  contentStyle={{
+                    backgroundColor: "#fff",
+                    borderColor: "#ccc",
+                    color: "#000",
+                  }}
+                  labelStyle={{ color: "#000" }}
+                />
+
+                {/* Accuracy Line (left axis) */}
+                <Line
+                  yAxisId="left"
+                  type="monotone"
+                  dataKey="accuracy"
+                  stroke="#3182ce"
+                  strokeWidth={2}
+                  name="Accuracy"
+                />
+
+                {/* Duration Line (right axis) */}
+                <Line
+                  yAxisId="right"
+                  type="monotone"
+                  dataKey="duration"
+                  stroke="#e53e3e"
+                  strokeWidth={2}
+                  name="Duration"
+                />
+              </LineChart>
+
+              </ResponsiveContainer>
+              <div className="overflow-scroll max-h-96">
+                <ul className="space-y-2 text-sm mt-4">
+                  {scoreHistory.slice().reverse().map((entry, index) => (
+                    <li key={index} className="flex justify-between border-b pb-1">
+                      <span>{entry.date}</span>
+                      <span className="font-semibold">
+                        {entry.score}/{entry.total} ({entry.accuracy}%)
+                      </span>
+                      <span className="font-semibold">
+                        {formatTime(entry.duration)}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <button
+                onClick={() => setShowHistory(false)}
+                className="mt-4 w-full bg-gray-500 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg transition"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     );
   }  
@@ -303,7 +406,7 @@ export default function QuizApp() {
 
         <button
           onClick={() => setShowHistory(true)}
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition mb-4"
+          className="w-full border-2 text-white font-medium py-2 px-4 rounded-lg transition mb-4"
         >
           View Score History
         </button>

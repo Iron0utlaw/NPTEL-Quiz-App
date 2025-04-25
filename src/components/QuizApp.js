@@ -114,9 +114,6 @@ export default function QuizApp() {
     };
 
     const yearWeekId = (year, week) => year * 100 + week;
-  
-    const isWeekSelected = (year, week) =>
-      selectedWeeks.includes(yearWeekId(year, week));
     
     const toggleWeek = (year, week) => {
       const id = yearWeekId(year, week);
@@ -242,6 +239,13 @@ export default function QuizApp() {
     const wrongAnswers = answers.filter((a) => !a.isCorrect && !a.skipped);
     const skippedQs = answers.filter((a) => a.skipped);
 
+    const resetQuiz = () => {
+      setQuestions([])
+      setQuizCompleted(false)
+      setQuizStarted(false)
+      setSelectedWeeks([])
+    }
+
     return (
       <div className="p-4 max-w-md mx-auto">
         <h1 className="text-2xl font-bold text-center mb-4">
@@ -286,6 +290,13 @@ export default function QuizApp() {
           className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition"
         >
           View Score History
+        </button>
+
+        <button
+          onClick={resetQuiz}
+          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition"
+        >
+          Main Menu
         </button>
 
         <ul className="space-y-4 mt-4">

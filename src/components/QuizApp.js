@@ -26,6 +26,7 @@ export default function QuizApp() {
   const [selectedWeeks, setSelectedWeeks] = useState([]);
   const [availableWeeks, setAvailableWeeks] = useState([]);
   const [quizStarted, setQuizStarted] = useState(false);
+  const [expandedYears, setExpandedYears] = useState([]);
 
   useEffect(() => {
     const weeks = [...new Set(questionData.map((q) => q.week))];
@@ -33,8 +34,10 @@ export default function QuizApp() {
   }, []);
 
   const startQuiz = () => {
+    const yearWeekId = (year, week) => year * 100 + week;
+
     const filtered = questionData.filter((q) =>
-      selectedWeeks.includes(q.week)
+      selectedWeeks.includes(yearWeekId(q.year, q.week))
     );
     const shuffled = shuffleArray([...filtered]).map((q) => ({
       ...q,
@@ -98,63 +101,146 @@ export default function QuizApp() {
 
   // Week selection screen
   if (!quizStarted) {
+    const groupedByYear = questionData.reduce((acc, q) => {
+      if (!acc[q.year]) acc[q.year] = new Set();
+      acc[q.year].add(q.week);
+      return acc;
+    }, {});
+    
+    const toggleYear = (year) => {
+      setExpandedYears((prev) =>
+        prev.includes(year) ? prev.filter((y) => y !== year) : [...prev, year]
+      );
+    };
+
+    const yearWeekId = (year, week) => year * 100 + week;
+  
+    const isWeekSelected = (year, week) =>
+      selectedWeeks.includes(yearWeekId(year, week));
+    
+    const toggleWeek = (year, week) => {
+      const id = yearWeekId(year, week);
+      setSelectedWeeks((prev) =>
+        prev.includes(id)
+          ? prev.filter((w) => w !== id)
+          : [...prev, id]
+      );
+    };
+    
+  
+    const selectAll = () => {
+      const allWeeks = questionData.map((q) => yearWeekId(q.year, q.week));
+      setSelectedWeeks([...new Set(allWeeks)]);
+    };
+    
+  
+    const deselectAll = () => setSelectedWeeks([]);
+  
     return (
       <div className="p-4 max-w-md mx-auto">
-  <h2 className="text-2xl font-semibold mb-4 text-center">Select Weeks to Start Quiz</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-center">Select Weeks</h2>
+  
+        <div className="flex justify-between mb-4">
+          <button
+            onClick={selectAll}
+            className="bg-green-500 hover:bg-green-600 text-white text-sm px-3 py-1 rounded-md"
+          >
+            Select All
+          </button>
+          <button
+            onClick={deselectAll}
+            className="bg-red-500 hover:bg-red-600 text-white text-sm px-3 py-1 rounded-md"
+          >
+            Deselect All
+          </button>
+        </div>
+  
+        <div className="space-y-4 mb-4">
+        {Object.entries(groupedByYear).map(([year, weeksSet]) => {
+          const weeks = [...weeksSet].sort((a, b) => a - b);
+          const isExpanded = expandedYears.includes(parseInt(year));
 
-  <div className="flex justify-between mb-4">
-    <button
-      onClick={() => setSelectedWeeks([...availableWeeks])}
-      className="bg-green-500 hover:bg-green-600 text-white text-sm px-3 py-1 rounded-md transition"
-    >
-      Select All
-    </button>
-    <button
-      onClick={() => setSelectedWeeks([])}
-      className="bg-red-500 hover:bg-red-600 text-white text-sm px-3 py-1 rounded-md transition"
-    >
-      Deselect All
-    </button>
-  </div>
+          return (
+            <div key={year}>
+              <button
+                onClick={() => toggleYear(parseInt(year))}
+                className="w-full px-4 py-2 dark:bg-gray-600 bg-gray-100 hover:bg-gray-200 font-medium flex justify-between items-center"
+              >
+                <span>{year}</span>
+                <span>{isExpanded ? "▲" : "▼"}</span>
+              </button>
 
-  <div className="grid grid-cols-3 gap-2 mb-4">
-    {availableWeeks.map((week) => {
-      const isSelected = selectedWeeks.includes(week);
-      return (
+              {isExpanded && (
+                <div className="p-4 space-y-2">
+                  <div className="flex justify-end gap-2 mb-2">
+                    <button
+                      onClick={() => {
+                        const newWeekIds = weeks.map((week) =>
+                          yearWeekId(parseInt(year), week)
+                        );
+                        setSelectedWeeks((prev) => [
+                          ...new Set([...prev, ...newWeekIds]),
+                        ]);
+                      }}
+                      className="bg-green-500 hover:bg-green-600 text-white text-xs px-2 py-1 rounded"
+                    >
+                      Select All
+                    </button>
+                    <button
+                      onClick={() => {
+                        const weekIdsToRemove = weeks.map((week) =>
+                          yearWeekId(parseInt(year), week)
+                        );
+                        setSelectedWeeks((prev) =>
+                          prev.filter((w) => !weekIdsToRemove.includes(w))
+                        );
+                      }}
+                      className="bg-red-500 hover:bg-red-600 text-white text-xs px-2 py-1 rounded"
+                    >
+                      Deselect All
+                    </button>
+                  </div>
+                  <div className="grid grid-cols-3 gap-2">
+                    {weeks.map((week) => {
+                      const id = yearWeekId(parseInt(year), week);
+                      const isSelected = selectedWeeks.includes(id);
+                      return (
+                        <button
+                          key={week}
+                          onClick={() => toggleWeek(parseInt(year), week)}
+                          className={`py-1 rounded-lg text-sm font-medium transition ${
+                            isSelected
+                              ? "bg-blue-600 text-white"
+                              : "bg-gray-200 hover:bg-gray-300 text-gray-800"
+                          }`}
+                        >
+                          Week {week}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
+        </div>
+  
         <button
-          key={week}
-          onClick={() =>
-            setSelectedWeeks((prev) =>
-              isSelected ? prev.filter((w) => w !== week) : [...prev, week]
-            )
-          }
-          className={`py-2 rounded-lg font-medium transition ${
-            isSelected
-              ? 'bg-blue-600 text-white'
-              : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
-          }`}
+          disabled={selectedWeeks.length === 0}
+          onClick={startQuiz}
+          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition disabled:bg-gray-400"
         >
-          Week {week}
+          Start Quiz
         </button>
-      );
-    })}
-  </div>
-
-  <button
-    disabled={selectedWeeks.length === 0}
-    onClick={startQuiz}
-    className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition disabled:bg-gray-400"
-  >
-    Start Quiz
-  </button>
-</div>
-
+      </div>
     );
-  }
+  }  
 
   if (quizCompleted) {
     const correctAnswers = answers.filter((a) => a.isCorrect);
     const wrongAnswers = answers.filter((a) => !a.isCorrect && !a.skipped);
+    const skippedQs = answers.filter((a) => a.skipped);
 
     return (
       <div className="p-4 max-w-md mx-auto">
@@ -183,6 +269,16 @@ export default function QuizApp() {
           >
             Wrong Answers
           </button>
+          <button
+            className={`px-4 py-2 rounded-lg font-medium ${
+              tab === "skipped"
+                ? "bg-yellow-500 text-white"
+                : "bg-gray-200 dark:bg-gray-700"
+            }`}
+            onClick={() => setTab("skipped")}
+          >
+            Skipped Questions
+          </button>
         </div>
 
         <button
@@ -193,7 +289,7 @@ export default function QuizApp() {
         </button>
 
         <ul className="space-y-4 mt-4">
-          {(tab === "correct" ? correctAnswers : wrongAnswers).map((item, idx) => (
+          {(tab === "correct" ? correctAnswers : tab === "wrong" ? wrongAnswers : skippedQs).map((item, idx) => (
             <li
               key={idx}
               className="border p-3 rounded-lg shadow dark:bg-gray-800"
@@ -283,6 +379,8 @@ export default function QuizApp() {
       </div>
     );
   }
+
+  console.log(questions)
 
   if (questions.length === 0)
     return <div className="text-center mt-10">Loading...</div>;
@@ -390,3 +488,4 @@ export default function QuizApp() {
     </div>
   );
 }
+

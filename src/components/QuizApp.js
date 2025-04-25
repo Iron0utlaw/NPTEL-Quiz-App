@@ -244,7 +244,7 @@ export default function QuizApp() {
 
         <button
           onClick={() => setShowHistory(true)}
-          className="w-full border-2 text-white font-medium py-2 px-4 rounded-lg transition"
+          className="w-full border-2 border-slate-500 dark:border-white text-slate-500 dark:text-white font-medium py-2 px-4 rounded-lg transition mb-4"
         >
           View Score History
         </button>
@@ -406,7 +406,7 @@ export default function QuizApp() {
 
         <button
           onClick={() => setShowHistory(true)}
-          className="w-full border-2 text-white font-medium py-2 px-4 rounded-lg transition mb-4"
+          className="w-full border-2 border-slate-500 dark:border-white text-slate-500 dark:text-white font-medium py-2 px-4 rounded-lg transition mb-4"
         >
           View Score History
         </button>

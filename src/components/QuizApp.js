@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import questionData from "../data/data.json";
+import React, { useState, useRef, useEffect } from "react";
+import questionData from "../data/full_data.json";
 import {
   LineChart,
   Line,
@@ -27,28 +27,46 @@ export default function QuizApp() {
   const [quizStarted, setQuizStarted] = useState(false);
   const [expandedYears, setExpandedYears] = useState([]);
   const quizStartTimeRef = useRef(null);
+  const [selectedSubject, setSelectedSubject] = useState("mipt");
 
+  useEffect(() => {
+    const storedScores = JSON.parse(localStorage.getItem("scoreHistory")) || [];
+    setScoreHistory(storedScores);
+  }, []);
 
   const startQuiz = () => {
     const yearWeekId = (year, week) => year * 100 + week;
-
+  
     const filtered = questionData.filter((q) =>
+      q.subject === selectedSubject &&
       selectedWeeks.includes(yearWeekId(q.year, q.week))
     );
+  
     const shuffled = shuffleArray([...filtered]).map((q) => ({
       ...q,
-      options: shuffleArray([...q.options]),
+      options: 
+        selectedSubject === "mipt" ? shuffleArray([...q.options]) : [...q.options],
     }));
+  
     setQuestions(shuffled);
     setQuizStarted(true);
-
-    // Start timer
     quizStartTimeRef.current = Date.now();
-
-    const storedScores = JSON.parse(localStorage.getItem("scoreHistory")) || [];
-    setScoreHistory(storedScores);
   };
+  
 
+  // Get all subjects
+  const allSubjects = [...new Set(questionData.map((q) => q.subject))];
+
+  const handleSelectSubject = (subject) => {
+    if (selectedSubject === subject) {
+      setSelectedSubject(null); // Deselect if clicked again
+      setSelectedWeeks([]); // Also clear selected weeks
+    } else {
+      setSelectedSubject(subject);
+      setSelectedWeeks([]); // Reset weeks when new subject is chosen
+    }
+  };
+  
   const handleAnswer = (selected) => {
     const isCorrect = selected === questions[current].correct_answer;
     setAttempted((attempted) => attempted + 1);
@@ -112,10 +130,23 @@ export default function QuizApp() {
 
   // Week selection screen
   if (!quizStarted) {
-    const groupedByYear = questionData.reduce((acc, q) => {
-      if (!acc[q.year]) acc[q.year] = new Set();
-      acc[q.year].add(q.week);
-      return acc;
+    // Get weeks for selected subject
+    const weeksForSubject = questionData
+    .filter((q) => q.subject === selectedSubject)
+    .map((q) => ({ year: q.year, week: q.week }));
+
+    const uniqueYearWeeks = Array.from(
+    new Set(weeksForSubject.map((item) => `${item.year}-${item.week}`))
+    ).map((str) => {
+    const [year, week] = str.split("-");
+    return { year: parseInt(year), week: parseInt(week) };
+    });
+
+    // Group by year
+    const groupedByYear = uniqueYearWeeks.reduce((acc, { year, week }) => {
+    if (!acc[year]) acc[year] = [];
+    acc[year].push(week);
+    return acc;
     }, {});
     
     const toggleYear = (year) => {
@@ -148,7 +179,25 @@ export default function QuizApp() {
   
     return (
       <div className="p-4 max-w-md mx-auto">
-        <h2 className="text-2xl font-semibold mb-4 text-center">Select MIPT Weeks</h2>
+        <div className="mb-6">
+          <h2 className="text-2xl font-semibold mb-2 text-center">Select Subject</h2>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {allSubjects.map((subject) => (
+              <button
+                key={subject}
+                onClick={() => handleSelectSubject(subject)}
+                className={`px-4 py-1 rounded-lg text-sm font-medium transition ${
+                  selectedSubject === subject
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-200 hover:bg-gray-300 text-gray-800"
+                }`}
+              >
+                {subject.toUpperCase()}
+              </button>
+            ))}
+          </div>
+        </div>
+        <h2 className="text-2xl font-semibold mb-4 text-center">Select {selectedSubject[0].toUpperCase()}{selectedSubject.slice(1)} Weeks</h2>
   
         <div className="flex justify-between mb-4">
           <button

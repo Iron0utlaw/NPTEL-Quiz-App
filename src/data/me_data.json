@@ -1,0 +1,1580 @@
+[
+    {
+        "question": "During facing operation in a conventional lathe the cutting velocity 46 mm",
+        "options": [
+            "Increases with feed",
+            "Decreases with feed",
+            "Unrelated to feed",
+            "None of these"
+        ],
+        "correct_answer": "Unrelated to feed",
+        "week": 0,
+        "year": 2025
+    },
+    {
+        "question": "On a lathe, you change settings in the machine to double the rotational speed of the spindle. This will also",
+        "options": [
+            "Double the feed (mm/rev) of the tool",
+            "Halve the feed (mm/rev) of the tool",
+            "Not affect the tool feed (mm/rev) at all",
+            "Depends on whether the feed is longitudinal (mm/rev) or cross feed (mm/rev)"
+        ],
+        "correct_answer": "Not affect the tool feed (mm/rev) at all",
+        "week": 0,
+        "year": 2025
+    },
+    {
+        "question": "Which one is not a cutting tool material?",
+        "options": [
+            "High speed steel",
+            "Tungsten carbide",
+            "Stainless steel",
+            "Ceramic"
+        ],
+        "correct_answer": "Stainless steel",
+        "week": 0,
+        "year": 2025
+    },
+    {
+        "question": "What is not true in case of CNC machining centre (Milling).",
+        "options": [
+            "Machining is performed by writing a code in the computer",
+            "3D (complex) surfaces can be machined",
+            "Many types of operations can be performed in a single setup of workpiece",
+            "It cannot be used for non-metallic materials."
+        ],
+        "correct_answer": "It cannot be used for non-metallic materials.",
+        "week": 0,
+        "year": 2025
+    },
+    {
+        "question": "Feed used in thread cutting usually has the following relation with feed used in straight turning.",
+        "options": [
+            "Higher",
+            "Equal",
+            "Lower",
+            "Unrelated"
+        ],
+        "correct_answer": "Lower",
+        "week": 0,
+        "year": 2025
+    },
+    {
+        "question": "In up milling operation,",
+        "options": [
+            "direction of rotation of cutter is same as direction of table movement",
+            "direction of rotation of cutter is opposite to direction of table movement",
+            "there is no such relation between directions of cutter and table movement",
+            "none of the above"
+        ],
+        "correct_answer": "direction of rotation of cutter is opposite to direction of table movement",
+        "week": 0,
+        "year": 2025
+    },
+    {
+        "question": "A job of diameter 100 mm is being turned using a cutting speed of 30 m/min. The corresponding feed is",
+        "options": [
+            "0.1 mm/rev",
+            "10 mm/min",
+            "300 \u03bcm",
+            "not known"
+        ],
+        "correct_answer": "0.1 mm/rev",
+        "week": 0,
+        "year": 2025
+    },
+    {
+        "question": "Minimum number of axis in CNC turning centre (Lathe) and CNC machining centre (Milling) respectively are",
+        "options": [
+            "2 and 3",
+            "3 and 3",
+            "3 and 2",
+            "4 and 4"
+        ],
+        "correct_answer": "2 and 3",
+        "week": 0,
+        "year": 2025
+    },
+    {
+        "question": "A perfect square on the end of a round shaft can be milled by mounting it on",
+        "options": [
+            "A differential",
+            "A compound rest",
+            "An index plate",
+            "A dividing head"
+        ],
+        "correct_answer": "A dividing head",
+        "week": 0,
+        "year": 2025
+    },
+    {
+        "question": "The arbor of the milling machine is used to hold",
+        "options": [
+            "Spindle",
+            "Cutting tool",
+            "Workpiece",
+            "Mandrel"
+        ],
+        "correct_answer": "Cutting tool",
+        "week": 0,
+        "year": 2025
+    },
+    {
+        "question": "What is correct in context of miniaturization?",
+        "options": [
+            "Low accuracy and sensitivity",
+            "High cost to performance ratio",
+            "Faster device",
+            "High energy required for excitation"
+        ],
+        "correct_answer": "Faster device",
+        "week": 1,
+        "year": 2025
+    },
+    {
+        "question": "What is MCU?",
+        "options": [
+            "Mechanical Control Unit",
+            "Mechanical Central Unit",
+            "Machine Control Unit",
+            "Machine Central Unit"
+        ],
+        "correct_answer": "Machine Control Unit",
+        "week": 1,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is a hybrid machining process?",
+        "options": [
+            "ECM",
+            "EDM",
+            "LBM",
+            "ECDM"
+        ],
+        "correct_answer": "ECDM",
+        "week": 1,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is a material removal process?",
+        "options": [
+            "Forming",
+            "Welding",
+            "3D Printing",
+            "Grinding"
+        ],
+        "correct_answer": "Grinding",
+        "week": 1,
+        "year": 2025
+    },
+    {
+        "question": "The feature tolerance of an object is 0.001mm and its size is 10 mm, then its relative accuracy will be",
+        "options": [
+            "0.01",
+            "10^4",
+            "10.001",
+            "10^-4"
+        ],
+        "correct_answer": "10^-4",
+        "week": 1,
+        "year": 2025
+    },
+    {
+        "question": "Most widely used workpiece material in MEMS based process is",
+        "options": [
+            "Steel",
+            "Silicon",
+            "Copper",
+            "Aluminum"
+        ],
+        "correct_answer": "Silicon",
+        "week": 1,
+        "year": 2025
+    },
+    {
+        "question": "Tool used in ultra-precision machining is",
+        "options": [
+            "WC",
+            "HSS",
+            "Natural Diamond Tool",
+            "CBN"
+        ],
+        "correct_answer": "Natural Diamond Tool",
+        "week": 1,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is a high production rate process?",
+        "options": [
+            "Mechanical micro machining",
+            "MEMS based processes",
+            "Ultra precision machining",
+            "Additive manufacturing processes"
+        ],
+        "correct_answer": "MEMS based processes",
+        "week": 1,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following path is a 3D machining or movement? (A \u2013 Starting point and D \u2013 Target point)?",
+        "options": [
+            "A\u2014G\u2014D",
+            "A\u2014B\u2014D",
+            "A\u2014F\u2014D",
+            "A\u2014D"
+        ],
+        "correct_answer": "A\u2014D",
+        "week": 1,
+        "year": 2025
+    },
+    {
+        "question": "Machine tool feedback device gives information of",
+        "options": [
+            "Position and velocity",
+            "Cutting temperature",
+            "Condition of cutting tool",
+            "Vibration"
+        ],
+        "correct_answer": "Position and velocity",
+        "week": 1,
+        "year": 2025
+    },
+    {
+        "question": "Small things are less affected by",
+        "options": [
+            "Mass",
+            "Inertia",
+            "Heat Storage",
+            "All of the above",
+            "Only (a) and (b)",
+            "Only (a) and (c)"
+        ],
+        "correct_answer": "All of the above",
+        "week": 2,
+        "year": 2025
+    },
+    {
+        "question": "Surface tension is scaled with length at",
+        "options": [
+            "l^3",
+            "l^2",
+            "l^1",
+            "l^5"
+        ],
+        "correct_answer": "l^1",
+        "week": 2,
+        "year": 2025
+    },
+    {
+        "question": "Which one of the following is scaled with length at l^1?",
+        "options": [
+            "Area",
+            "Surface tension",
+            "Resistance",
+            "Moment of inertia"
+        ],
+        "correct_answer": "Resistance",
+        "week": 2,
+        "year": 2025
+    },
+    {
+        "question": "When the radius of the pipe is scaled down proportionally,",
+        "options": [
+            "Volumetric Flow and pressure drop per unit length both increase",
+            "Volumetric Flow decreases and pressure drop per unit length increases",
+            "Volumetric Flow and pressure drop per unit length both decrease",
+            "Volumetric Flow increases and pressure drop per unit length decreases"
+        ],
+        "correct_answer": "Volumetric Flow decreases and pressure drop per unit length increases",
+        "week": 2,
+        "year": 2025
+    },
+    {
+        "question": "Main driving factor in scaling law is",
+        "options": [
+            "Weight to volume ratio",
+            "Surface area to volume ratio",
+            "Length to surface area ratio",
+            "Surface finish to tolerance ratio"
+        ],
+        "correct_answer": "Surface area to volume ratio",
+        "week": 2,
+        "year": 2025
+    },
+    {
+        "question": "What is less effective at small scale",
+        "options": [
+            "Electrostatic forces",
+            "Surface tension",
+            "Inertial forces",
+            "All the above",
+            "Both (a) and (b)",
+            "Both (a) and (c)"
+        ],
+        "correct_answer": "Inertial forces",
+        "week": 2,
+        "year": 2025
+    },
+    {
+        "question": "A square cantilever beam as shown in Figure below is scaled down proportionally (L and b) from 8 to 0.2. Maximum bending stress at the constraint",
+        "options": [
+            "Decreases 40 times",
+            "Increases 40 times",
+            "Decreases 1600 times",
+            "Increases 1600 times"
+        ],
+        "correct_answer": "Increases 1600 times",
+        "week": 2,
+        "year": 2025
+    },
+    {
+        "question": "When the radius of the pipe is scaled down from 5 mm to 0.5 mm, rate of volumetric flow?",
+        "options": [
+            "Decreases 10 times",
+            "Increases 10 times",
+            "Increases 10000 times",
+            "Decreases 10000 times"
+        ],
+        "correct_answer": "Decreases 10000 times",
+        "week": 2,
+        "year": 2025
+    },
+    {
+        "question": "Small uncut chip thickness is responsible for",
+        "options": [
+            "High Cutting Temperature",
+            "High Shear Yield Strength of workpiece",
+            "Low friction coefficient",
+            "All of the above",
+            "Only (a) and (c)",
+            "Only (b) and (c)"
+        ],
+        "correct_answer": "High Shear Yield Strength of workpiece",
+        "week": 2,
+        "year": 2025
+    },
+    {
+        "question": "Size effect has influence on",
+        "options": [
+            "Chip Thickness",
+            "Chip formation",
+            "Cutting Force",
+            "All of the above",
+            "Only (a) and (c)",
+            "Only (b) and (c)"
+        ],
+        "correct_answer": "All of the above",
+        "week": 2,
+        "year": 2025
+    },
+    {
+        "question": "In micro machining, generally the ratio of uncut chip thickness to cutting edge radius is",
+        "options": [
+            "Infinite",
+            "Less than or equal to 1",
+            "Very Large",
+            "Zero"
+        ],
+        "correct_answer": "Less than or equal to 1",
+        "week": 3,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following step of failure of ductile material is shown in below figure?",
+        "options": [
+            "Inclusion",
+            "Void growth",
+            "Void Nucleation",
+            "Necking between voids"
+        ],
+        "correct_answer": "Necking between voids",
+        "week": 3,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following material removal mechanism has significant effect on surface quality deterioration?",
+        "options": [
+            "Shearing",
+            "Ploughing",
+            "Rubbing",
+            "Extrusion"
+        ],
+        "correct_answer": "Rubbing",
+        "week": 3,
+        "year": 2025
+    },
+    {
+        "question": "Which plane of Silicon is the strongest?",
+        "options": [
+            "100",
+            "110",
+            "101",
+            "111"
+        ],
+        "correct_answer": "111",
+        "week": 3,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is the unit of specific cutting energy?",
+        "options": [
+            "J/mm^3",
+            "J/mm^2",
+            "N/mm",
+            "W/mm^3"
+        ],
+        "correct_answer": "J/mm^3",
+        "week": 3,
+        "year": 2025
+    },
+    {
+        "question": "Micro cutting of grains having different orientations would result in",
+        "options": [
+            "High fluctuation of cutting force",
+            "Tool breakage",
+            "High surface roughness",
+            "All of the above",
+            "Only (a) and (b)",
+            "Only (a) and (c)"
+        ],
+        "correct_answer": "All of the above",
+        "week": 3,
+        "year": 2025
+    },
+    {
+        "question": "What is minimum uncut chip thickness?",
+        "options": [
+            "It is the minimum thickness of the uncut chip to avoid shearing of material during machining",
+            "It is the minimum thickness of the uncut chip to reduce the tool wear",
+            "It is the minimum thickness of the uncut chip to reduce built-up edge formation",
+            "It is the minimum thickness of the uncut chip to remove material in the form of chip"
+        ],
+        "correct_answer": "It is the minimum thickness of the uncut chip to remove material in the form of chip",
+        "week": 3,
+        "year": 2025
+    },
+    {
+        "question": "Which one is the correct sequence of material removal mechanism with increase in the rake angle on negative side?",
+        "options": [
+            "Shearing  Extrusion  Ploughing  Rubbing",
+            "Shearing Ploughing Extrusion Rubbing",
+            "Shearing Rubbing Ploughing Extrusion",
+            "Extrusion  Shearing  Ploughing  Rubbing"
+        ],
+        "correct_answer": "Shearing  Extrusion  Ploughing  Rubbing",
+        "week": 3,
+        "year": 2025
+    },
+    {
+        "question": "What is not correct with reference to anisotropic material?",
+        "options": [
+            "Material properties are different in different planes",
+            "Material properties are different in crystal orientations",
+            "Force and energy required do not change when machining in different directions",
+            "Shear stress is different in different planes and directions."
+        ],
+        "correct_answer": "Force and energy required do not change when machining in different directions",
+        "week": 3,
+        "year": 2025
+    },
+    {
+        "question": "Match the following and choose correct option\nA Shearing I Displacement of material by plastic upheaval\nB Extrusion II Lowest rake angle on negative size\nC Ploughing III Significant friction force\nD Rubbing IV Similar to grinding",
+        "options": [
+            "A-III, B-IV, C- I, D-II",
+            "A-IV, B-I, C- II, D-III",
+            "A-II, B-IV, C- I, D-III",
+            "A-II, B-I, C- IV, D-III"
+        ],
+        "correct_answer": "A-II, B-IV, C- I, D-III",
+        "week": 3,
+        "year": 2025
+    },
+    {
+        "question": "What is the effect on cutting force in case of micro machining due to the reduction in uncut chip thickness?",
+        "options": [
+            "Increases proportionally",
+            "Decreases proportionally",
+            "Does not increase proportionally",
+            "Does not decrease proportionally"
+        ],
+        "correct_answer": "Does not decrease proportionally",
+        "week": 4,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following problem is unlikely to occur due to burr formation?",
+        "options": [
+            "Improper part mating",
+            "Accelerated device wear",
+            "Decreased cost of production",
+            "Decreased device performance"
+        ],
+        "correct_answer": "Decreased cost of production",
+        "week": 4,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following parameter is less responsible for burr formation?",
+        "options": [
+            "Cutting Speed",
+            "Feed Rate",
+            "Temperature",
+            "Chip Thickness"
+        ],
+        "correct_answer": "Temperature",
+        "week": 4,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is a deburring process?",
+        "options": [
+            "Ultrasonic wet peening",
+            "Electrochemical polishing",
+            "Both (a) and (b)",
+            "Cylindrical grinding",
+            "Both (b) and (d)"
+        ],
+        "correct_answer": "Both (a) and (b)",
+        "week": 4,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is a short frequency component?",
+        "options": [
+            "Waviness",
+            "Profile",
+            "Roughness",
+            "Lay"
+        ],
+        "correct_answer": "Roughness",
+        "week": 4,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following instrument can be used for the surface roughness measurement of the complete region shown in below figure?",
+        "options": [
+            "Atomic Force Microscope",
+            "Optical Microscope",
+            "Stylus Method",
+            "Both (a) and (b)",
+            "Both (a) and (c)"
+        ],
+        "correct_answer": "Stylus Method",
+        "week": 4,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is correct sequence of burr formation before crack propagation?",
+        "options": [
+            "Continuous cutting Pre-Initiation Initiation Pivoting Burr Development",
+            "Pre-Initiation Initiation Continuous cutting  Pivoting Burr Development",
+            "Continuous cutting Pivoting Pre-Initiation Initiation Burr Development",
+            "Pivoting Continuous cutting  Pre-Initiation Initiation Burr Development"
+        ],
+        "correct_answer": "Continuous cutting Pre-Initiation Initiation Pivoting Burr Development",
+        "week": 4,
+        "year": 2025
+    },
+    {
+        "question": "In the figure given below, size of the burrs will be more at the following location",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_answer": "3",
+        "week": 4,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following type of burr is shown in below figure?",
+        "options": [
+            "Tear Burr",
+            "Cut-off Burr",
+            "Rollover Burr",
+            "Poisson Burr"
+        ],
+        "correct_answer": "Tear Burr",
+        "week": 4,
+        "year": 2025
+    },
+    {
+        "question": "Select the correct sequence of processes with reference to increase in the specific cutting energy",
+        "options": [
+            "Grinding  Micro machining  Conventional machining  Tensile testing",
+            "Tensile testing  Micro machining  Conventional machining  Grinding",
+            "Tensile testing  Conventional machining  Micro machining  Grinding",
+            "Grinding  Micro machining  Tensile testing  Conventional machining"
+        ],
+        "correct_answer": "Tensile testing  Conventional machining  Micro machining  Grinding",
+        "week": 4,
+        "year": 2025
+    },
+    {
+        "question": "Elastic Recovery is dependent on",
+        "options": [
+            "Size of cutting edge radius",
+            "Microstructure and hardness",
+            "Both (a) and (b)",
+            "Neither (a) nor (b)"
+        ],
+        "correct_answer": "Both (a) and (b)",
+        "week": 5,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is not correct about machining at micro scale?",
+        "options": [
+            "High specific cutting energy",
+            "Difficulty in modeling",
+            "Tool breakage",
+            "Ease in sensing and monitoring"
+        ],
+        "correct_answer": "Ease in sensing and monitoring",
+        "week": 5,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is a moving body of a machine tool?",
+        "options": [
+            "Machine Base",
+            "Column",
+            "Spindle box housing",
+            "Work tables"
+        ],
+        "correct_answer": "Work tables",
+        "week": 5,
+        "year": 2025
+    },
+    {
+        "question": "The major design issue in the context of the design of the machine as a system is",
+        "options": [
+            "Structural Configuration",
+            "Structural Connectivity",
+            "Both (a) and (b)",
+            "Neither (a) nor (b)"
+        ],
+        "correct_answer": "Both (a) and (b)",
+        "week": 5,
+        "year": 2025
+    },
+    {
+        "question": "The resolution of feedback encoder should be at least ______ than the machine controller?",
+        "options": [
+            "10 times lower",
+            "10 times better",
+            "100 times lower",
+            "100 times better"
+        ],
+        "correct_answer": "10 times better",
+        "week": 5,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is correct about resolution?",
+        "options": [
+            "If the system resolution is n, then all motions are integer multiples of n^2",
+            "If the system resolution is n, then all motions are integer multiples of \u221an",
+            "If the system resolution is n, then all motions are integer multiples of n",
+            "If the system resolution is n, then all motions are integer multiples of n^n"
+        ],
+        "correct_answer": "If the system resolution is n, then all motions are integer multiples of n",
+        "week": 5,
+        "year": 2025
+    },
+    {
+        "question": "A vacuum holder helps to,",
+        "options": [
+            "Evacuate the microchips by sucking it away time to time",
+            "Hold the cutting fluid at the machining zone for a longer period",
+            "Handle the micro components without making any permanent deformations",
+            "Hold the tool monitoring systems at position for online monitoring"
+        ],
+        "correct_answer": "Handle the micro components without making any permanent deformations",
+        "week": 5,
+        "year": 2025
+    },
+    {
+        "question": "Which one of the below cannot be used to monitor the machining process in real time?",
+        "options": [
+            "Dynamometer",
+            "Touch probe",
+            "Acoustic emission sensor",
+            "Accelerometer"
+        ],
+        "correct_answer": "Touch probe",
+        "week": 5,
+        "year": 2025
+    },
+    {
+        "question": "Bidirectional repeatability is difficult to achieve in axis movement due to",
+        "options": [
+            "Hysteresis of mechanical movement",
+            "Linear movement of drive",
+            "Low accuracy of the slide movement",
+            "Low resolution of the slide movement"
+        ],
+        "correct_answer": "Hysteresis of mechanical movement",
+        "week": 5,
+        "year": 2025
+    },
+    {
+        "question": "What is resolution with reference to terms of machine tool?",
+        "options": [
+            "The least variation in the dimensions of the machined component and the desired value.",
+            "How fast the tool or workpiece can reach to the desired location during command execution.",
+            "The least increment of movement, the machine is capable to produce.",
+            "It is related to the tolerance of the machined component."
+        ],
+        "correct_answer": "The least increment of movement, the machine is capable to produce.",
+        "week": 5,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is correct about closed loop structure?",
+        "options": [
+            "Good thermal stability",
+            "Easy access to work zone",
+            "Strong ridged structural loop",
+            "All of the above",
+            "Only (a) and (b)",
+            "Only (a) and (c)"
+        ],
+        "correct_answer": "All of the above",
+        "week": 6,
+        "year": 2025
+    },
+    {
+        "question": "CMM stands for",
+        "options": [
+            "Co-ordinate Machine Measurement",
+            "Centre Measuring Machine",
+            "Co-ordinate Measuring Machine",
+            "Centre Machine Measurement"
+        ],
+        "correct_answer": "Co-ordinate Measuring Machine",
+        "week": 6,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is correct match of the numbers marked on the figure given below?",
+        "options": [
+            "1-Leading Edge 2-Stagnant Edge 3-Bleeding Edge",
+            "1- Stagnant Edge 2- Leading Edge 3-Bleeding Edge",
+            "1-Leading Edge 2- Bleeding Edge 3- Stagnant Edge",
+            "1- Bleeding Edge 2- Leading Edge 3- Stagnant Edge"
+        ],
+        "correct_answer": "1- Stagnant Edge 2- Leading Edge 3-Bleeding Edge",
+        "week": 6,
+        "year": 2025
+    },
+    {
+        "question": "The sensitive directions in case of Milling Machine are",
+        "options": [
+            "X-axis and Y-axis",
+            "X-axis and Z-axis",
+            "Y-axis and Z-axis",
+            "X-axis, Y-axis and Z-axis"
+        ],
+        "correct_answer": "X-axis, Y-axis and Z-axis",
+        "week": 6,
+        "year": 2025
+    },
+    {
+        "question": "What are the different components of error in a linear movement?",
+        "options": [
+            "1 position error, 2 straightness error, 2 roll error and 1 tilt error",
+            "1 position error, 2 straightness error, 1 roll error and 2 tilt error",
+            "2 position error, 1 straightness error, 2 roll error and 1 tilt error",
+            "2 position error, 1 straightness error, 1 roll error and 2 tilt error"
+        ],
+        "correct_answer": "1 position error, 2 straightness error, 1 roll error and 2 tilt error",
+        "week": 6,
+        "year": 2025
+    },
+    {
+        "question": "The degree of freedom for bolt and nut combination is",
+        "options": [
+            "Translation and Rotation (Independent)",
+            "Only translation",
+            "Only rotation",
+            "Translation and Rotation (Coupled)"
+        ],
+        "correct_answer": "Translation and Rotation (Coupled)",
+        "week": 6,
+        "year": 2025
+    },
+    {
+        "question": "When travelling in X- direction, Flatness can be defined as",
+        "options": [
+            "Displacement error along the X-axis",
+            "Displacement error along the Y-axis",
+            "Displacement error along the Z-axis",
+            "Both (a) and (b)",
+            "Both (a) and (c)"
+        ],
+        "correct_answer": "Displacement error along the Z-axis",
+        "week": 6,
+        "year": 2025
+    },
+    {
+        "question": "Kinematic errors are not related to",
+        "options": [
+            "Imperfect Geometry",
+            "Alignment and dimension of the machine tools",
+            "Wear or material aging",
+            "Range of the spindle speed"
+        ],
+        "correct_answer": "Range of the spindle speed",
+        "week": 6,
+        "year": 2025
+    },
+    {
+        "question": "When travelling in X- direction, Straightness can be defined as",
+        "options": [
+            "Displacement error along the X-axis",
+            "Displacement error along the Y-axis",
+            "Displacement error along the Z-axis",
+            "Both (a) and (b)",
+            "Both (a) and (c)"
+        ],
+        "correct_answer": "Displacement error along the Y-axis",
+        "week": 6,
+        "year": 2025
+    },
+    {
+        "question": "Drift error in the machine tool is due to",
+        "options": [
+            "Aging of the components",
+            "Improper mating of the components",
+            "Thermal expansion of the components",
+            "Failure of the components"
+        ],
+        "correct_answer": "Aging of the components",
+        "week": 6,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is a preferable material for making structure of micro machine tool?",
+        "options": [
+            "Metal",
+            "Granite",
+            "Ceramic",
+            "Polymer concrete"
+        ],
+        "correct_answer": "Polymer concrete",
+        "week": 7,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is the least important material property of the machine frame?",
+        "options": [
+            "Young\u2019s modulus",
+            "Shear modulus",
+            "Poisson\u2019s ratio",
+            "Thermal conductivity"
+        ],
+        "correct_answer": "Poisson\u2019s ratio",
+        "week": 7,
+        "year": 2025
+    },
+    {
+        "question": "Increasing order of Young\u2019s modulus of different material which are used for making machine structure is:",
+        "options": [
+            "Elastomers<Non-technical ceramics<Technical ceramics< Polymers",
+            "Elastomers<Technical ceramics<Non-technical ceramics< Polymers",
+            "Elastomers<Polymers<Composite<Technical ceramics",
+            "Elastomers< Polymers < Technical ceramics< Non-technical ceramics"
+        ],
+        "correct_answer": "Elastomers<Polymers<Composite<Technical ceramics",
+        "week": 7,
+        "year": 2025
+    },
+    {
+        "question": "Specific energy requirement for making the high strength material will be",
+        "options": [
+            "Low",
+            "High",
+            "In between low and high",
+            "Specific energy requirement is not the criteria for making high strength material"
+        ],
+        "correct_answer": "High",
+        "week": 7,
+        "year": 2025
+    },
+    {
+        "question": "What you will do to reduce the local strain in the component?",
+        "options": [
+            "Reduce thickness of the wall",
+            "Increase thickness of the wall",
+            "Reduce the weight of the component",
+            "Increase the weight of the component"
+        ],
+        "correct_answer": "Increase thickness of the wall",
+        "week": 7,
+        "year": 2025
+    },
+    {
+        "question": "Which one of the following statement is true?",
+        "options": [
+            "Polymer concrete is heavier than C.I.",
+            "C.I. has better thermal stability than Polymer concrete",
+            "Polymer concrete has superior dynamic and static rigidity",
+            "C.I. has better damping capacity than Polymer concrete"
+        ],
+        "correct_answer": "Polymer concrete has superior dynamic and static rigidity",
+        "week": 7,
+        "year": 2025
+    },
+    {
+        "question": "Axis of the guideways should have",
+        "options": [
+            "Low velocity as well as stiff bearing",
+            "High velocity as well as stiff bearing",
+            "High acceleration as well as stiff bearing",
+            "Low acceleration as well as stiff bearing"
+        ],
+        "correct_answer": "High acceleration as well as stiff bearing",
+        "week": 7,
+        "year": 2025
+    },
+    {
+        "question": "What is the drawback of the granite when it is used for making machine tool?",
+        "options": [
+            "Low damping",
+            "Low wear resistance",
+            "Moisture absorbing capacity",
+            "Presence of residual stress"
+        ],
+        "correct_answer": "Moisture absorbing capacity",
+        "week": 7,
+        "year": 2025
+    },
+    {
+        "question": "Which one of the following guideways is more preferable for taking load in up-down as well as left-right directions?",
+        "options": [
+            "Hydrostatic",
+            "Hydrodynamics",
+            "Linear",
+            "Box"
+        ],
+        "correct_answer": "Linear",
+        "week": 7,
+        "year": 2025
+    },
+    {
+        "question": "Basic static load rating of the roller is roughly defined as:",
+        "options": [
+            "Total permanent deformation is the half of the diameter of the roller",
+            "Total permanent deformation is 1/1000 of the diameter of the roller",
+            "Total permanent deformation is 1/10000 of the diameter of the roller",
+            "Total permanent deformation is 1/100000 of the diameter of the roller"
+        ],
+        "correct_answer": "Total permanent deformation is 1/10000 of the diameter of the roller",
+        "week": 7,
+        "year": 2025
+    },
+    {
+        "question": "The function of precision laser system in MMC is to determine",
+        "options": [
+            "Only diameter of the tool",
+            "Only length of the tool",
+            "Both diameter and length of the tool",
+            "Rake and clearance angle of the tool"
+        ],
+        "correct_answer": "Both diameter and length of the tool",
+        "week": 8,
+        "year": 2025
+    },
+    {
+        "question": "Which one of the following factors affect air bearing life the most?",
+        "options": [
+            "Speed of rotation",
+            "External load",
+            "Acceleration",
+            "Cleanliness of air"
+        ],
+        "correct_answer": "Cleanliness of air",
+        "week": 8,
+        "year": 2025
+    },
+    {
+        "question": "Mode of failure of air bearing",
+        "options": [
+            "Spalling wear",
+            "Smearing wear",
+            "Erosion wear",
+            "Fretting wear"
+        ],
+        "correct_answer": "Erosion wear",
+        "week": 8,
+        "year": 2025
+    },
+    {
+        "question": "The variation of radial stiffness of air bearing with respect to shaft angular position is",
+        "options": [
+            "Non uniform",
+            "Uniform",
+            "Triangular",
+            "Trapezium"
+        ],
+        "correct_answer": "Uniform",
+        "week": 8,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following bearing offers the highest friction & has the lowest cost?",
+        "options": [
+            "Air bearing",
+            "Hydrostatic bearing",
+            "Roller bearing",
+            "Cylindrical bearing"
+        ],
+        "correct_answer": "Roller bearing",
+        "week": 8,
+        "year": 2025
+    },
+    {
+        "question": "On which part of the linear motor magnet is present?",
+        "options": [
+            "Rotor",
+            "Stator",
+            "Forcer",
+            "Coil"
+        ],
+        "correct_answer": "Stator",
+        "week": 8,
+        "year": 2025
+    },
+    {
+        "question": "The maximum speed of a linear motor is governed by",
+        "options": [
+            "Bus voltage",
+            "Speed of the control electronics",
+            "Resolution",
+            "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "week": 8,
+        "year": 2025
+    },
+    {
+        "question": "The stiffness of the linear motor does not depend upon",
+        "options": [
+            "Peak force of the motor",
+            "Resolution of the feedback",
+            "Current available",
+            "Speed of the travel"
+        ],
+        "correct_answer": "Speed of the travel",
+        "week": 8,
+        "year": 2025
+    },
+    {
+        "question": "The problem of heating in the linear drive is due to",
+        "options": [
+            "Thermal heating",
+            "Mechanical friction",
+            "Both of the above",
+            "Electrical power supply"
+        ],
+        "correct_answer": "Electrical power supply",
+        "week": 8,
+        "year": 2025
+    },
+    {
+        "question": "Which statement is/are true for MMC (Micro Machining Center)?",
+        "options": [
+            "It has high moisture retention capacity and low damping coefficient",
+            "It has high moisture retention capacity and high damping coefficient",
+            "It has low moisture retention capacity and low damping coefficient",
+            "It has low moisture retention capacity and high damping coefficient"
+        ],
+        "correct_answer": "It has low moisture retention capacity and high damping coefficient",
+        "week": 8,
+        "year": 2025
+    },
+    {
+        "question": "What is 4 in 4 Bit encoder?",
+        "options": [
+            "It has 4 LEDs",
+            "It has 4 transmitters",
+            "Both (a) and (b)",
+            "It has 4 tracks"
+        ],
+        "correct_answer": "It has 4 tracks",
+        "week": 9,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following components or mechanisms is not the part of the belt driven spindle?",
+        "options": [
+            "Tooling system",
+            "Drawbar mechanism",
+            "Tool release system",
+            "Linear encoder"
+        ],
+        "correct_answer": "Linear encoder",
+        "week": 9,
+        "year": 2025
+    },
+    {
+        "question": "Spindle bearing should not provide",
+        "options": [
+            "High rotational speed",
+            "Low transfer torque",
+            "High power to the cutting tool",
+            "Reasonable loading"
+        ],
+        "correct_answer": "Low transfer torque",
+        "week": 9,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following statement(s) is/are true?",
+        "options": [
+            "Angular contact bearing provide precision",
+            "Tapered bearing is used for high load application",
+            "Both (a) and (b)",
+            "Tapered bearing has lower stiffness over ball bearings"
+        ],
+        "correct_answer": "Both (a) and (b)",
+        "week": 9,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following bearing is highly accurate and used in high speed spindle?",
+        "options": [
+            "ABEC 1",
+            "ABEC 5",
+            "ABEC 7",
+            "ABEC 9"
+        ],
+        "correct_answer": "ABEC 9",
+        "week": 9,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following statement(s) is/are true?",
+        "options": [
+            "To have greater radial load carrying capacity bearing should have high contact angle",
+            "To have greater radial load carrying capacity bearing should have low contact angle",
+            "To have greater bending load carrying capacity bearing should have high contact angle",
+            "To have greater axial load carrying capacity bearing should have low contact angle"
+        ],
+        "correct_answer": "To have greater radial load carrying capacity bearing should have low contact angle",
+        "week": 9,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following statement(s) is/are true?",
+        "options": [
+            "Low contact angle of a spindle is primarily used in drilling",
+            "Low contact angle of a spindle is primarily used in milling",
+            "High contact angle of a spindle is primarily used in shaping",
+            "High contact angle of a spindle is primarily used in planning"
+        ],
+        "correct_answer": "Low contact angle of a spindle is primarily used in milling",
+        "week": 9,
+        "year": 2025
+    },
+    {
+        "question": "What is the importance of the bearing preloading?",
+        "options": [
+            "To provide excess play by applying axial or thrust forces to a bearing",
+            "To remove excess play by applying more friction to a bearing",
+            "To provide excess play by applying radial and thrust forces to a bearing",
+            "To remove excess play by applying axial or thrust forces to a bearing"
+        ],
+        "correct_answer": "To remove excess play by applying axial or thrust forces to a bearing",
+        "week": 9,
+        "year": 2025
+    },
+    {
+        "question": "Excessive preloading of the bearing doesn\u2019t result in",
+        "options": [
+            "Increased heat generation",
+            "Excessive stress",
+            "Higher chances of fatigue",
+            "Decreased torque"
+        ],
+        "correct_answer": "Decreased torque",
+        "week": 9,
+        "year": 2025
+    },
+    {
+        "question": "What is the purpose(s) of duplex bearing?",
+        "options": [
+            "To provide high rotational speed",
+            "To provide high feed rate during machining",
+            "To provide less friction",
+            "To provide load sharing and high stiffness"
+        ],
+        "correct_answer": "To provide load sharing and high stiffness",
+        "week": 9,
+        "year": 2025
+    },
+    {
+        "question": "Races and ball in ball bearing are made up of which of the following material?",
+        "options": [
+            "Ceramic",
+            "Carbide",
+            "Steel",
+            "Cast iron"
+        ],
+        "correct_answer": "Steel",
+        "week": 10,
+        "year": 2025
+    },
+    {
+        "question": "One of the mechanisms of the bearing failure is",
+        "options": [
+            "Hot welding of raceway material to the ball",
+            "Cold welding of ball material to the raceway",
+            "Hot welding between balls",
+            "Cold welding between balls"
+        ],
+        "correct_answer": "Cold welding of ball material to the raceway",
+        "week": 10,
+        "year": 2025
+    },
+    {
+        "question": "Air bearing spindle provides",
+        "options": [
+            "Low torque, low speed",
+            "High speed, high torque",
+            "High torque, low speed",
+            "High speed, low torque"
+        ],
+        "correct_answer": "High speed, low torque",
+        "week": 10,
+        "year": 2025
+    },
+    {
+        "question": "How you will reduce the warping of the aerostatic spindle?",
+        "options": [
+            "Increase temperature gradient in the spindle",
+            "Decrease temperature gradient in the spindle",
+            "Increase pressure gradient in the spindle",
+            "Decrease pressure gradient in the spindle"
+        ],
+        "correct_answer": "Decrease temperature gradient in the spindle",
+        "week": 10,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following tool retention system is best for high speed application?",
+        "options": [
+            "HSK",
+            "BT",
+            "ISO",
+            "CAT"
+        ],
+        "correct_answer": "HSK",
+        "week": 10,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is not the characteristic of 3 surface contact holder of tool retention system?",
+        "options": [
+            "High speed",
+            "High dynamic stiffness",
+            "High static stiffness",
+            "High runout"
+        ],
+        "correct_answer": "High runout",
+        "week": 10,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following is not a micro tool fabrication process?",
+        "options": [
+            "Electro Discharge Machining (EDM)",
+            "Focused Ion Beam (FIB) Machining",
+            "Abrasive jet machining (AJM)",
+            "Laser Beam Machining (LBM)"
+        ],
+        "correct_answer": "Abrasive jet machining (AJM)",
+        "week": 10,
+        "year": 2025
+    },
+    {
+        "question": "In micro-tool fabrication by Wire Electric Discharge Grinding (WEDG)",
+        "options": [
+            "Wire is made of aluminum and electrode is of tungsten carbide",
+            "Wire is made of copper and electrode is of ceramic",
+            "Wire is made of copper and electrode is of tungsten carbide",
+            "Wire is made of aluminum and electrode is of ceramic"
+        ],
+        "correct_answer": "Wire is made of copper and electrode is of tungsten carbide",
+        "week": 10,
+        "year": 2025
+    },
+    {
+        "question": "ELID process uses",
+        "options": [
+            "In-process dressing of the grinding wheel to maintain uniform protrusion of abrasive particles",
+            "In-process monitoring of the status of the abrasive particles",
+            "In-process dressing of the copper electrode (cathode) to maintain uniform protrusion of abrasive particles",
+            "In-process monitoring of the forces acting on the workpiece"
+        ],
+        "correct_answer": "In-process dressing of the grinding wheel to maintain uniform protrusion of abrasive particles",
+        "week": 10,
+        "year": 2025
+    },
+    {
+        "question": "Micro tools having diameter less than 50 \u00b5m generally fabricated without helix angle",
+        "options": [
+            "To reduce the wastage of the material in the form of chips during fabrication",
+            "To improve the surface finish on the machined component",
+            "To improve their rigidity",
+            "To reduce burr formation"
+        ],
+        "correct_answer": "To improve their rigidity",
+        "week": 10,
+        "year": 2025
+    },
+    {
+        "question": "Which statement is true?",
+        "options": [
+            "HSS cutter is harder than carbide cutter",
+            "HSS cutter can bend more than carbide cutter",
+            "HSS cutter has long life than carbide cutter under the same operating conditions",
+            "HSS cutter does not required coolant during machining operation"
+        ],
+        "correct_answer": "HSS cutter can bend more than carbide cutter",
+        "week": 11,
+        "year": 2025
+    },
+    {
+        "question": "What is the major issue of tool breakage in micro machining?",
+        "options": [
+            "Chip clogging",
+            "Higher rotational speed",
+            "Small depth of cut",
+            "Low feed rate"
+        ],
+        "correct_answer": "Chip clogging",
+        "week": 11,
+        "year": 2025
+    },
+    {
+        "question": "Hammering vibration is produce when using",
+        "options": [
+            "End mill cutter without coating",
+            "End mill cutter with axial runout",
+            "Two flutes end mill cutter",
+            "Four flutes end mill cutter"
+        ],
+        "correct_answer": "Two flutes end mill cutter",
+        "week": 11,
+        "year": 2025
+    },
+    {
+        "question": "What is the problem in using small machine tool for micro machining applications?",
+        "options": [
+            "Small machine tools are costly",
+            "It is difficult to get small size sensors and actuators for monitoring and control of the small machine tool",
+            "It is difficult to make and assemble components while building the small machine tool",
+            "It is difficult to learn the machining operation in small size machine tool"
+        ],
+        "correct_answer": "It is difficult to get small size sensors and actuators for monitoring and control of the small machine tool",
+        "week": 11,
+        "year": 2025
+    },
+    {
+        "question": "In diamond turning,",
+        "options": [
+            "X and Z movement is given by the cutting tool",
+            "X and Z movement is given by the spindle head",
+            "X movement is given by the cutting tool and Z movement is given by the spindle head",
+            "X movement is given by the spindle head and Z movement is given by the cutting tool"
+        ],
+        "correct_answer": "X movement is given by the spindle head and Z movement is given by the cutting tool",
+        "week": 11,
+        "year": 2025
+    },
+    {
+        "question": "The diamond turning can be classified as facing and fly cutting based on the",
+        "options": [
+            "Number of axis",
+            "Type of coordinate system",
+            "Type of machining operation",
+            "Type of tooling system"
+        ],
+        "correct_answer": "Type of machining operation",
+        "week": 11,
+        "year": 2025
+    },
+    {
+        "question": "In micromachining, generally an end mill cutter having _____ flutes are used.",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct_answer": "2",
+        "week": 11,
+        "year": 2025
+    },
+    {
+        "question": "Built up edge in micro milling",
+        "options": [
+            "Decreases surface finish",
+            "Increases deflection",
+            "Increases material removal rate",
+            "Increases tool life"
+        ],
+        "correct_answer": "Increases deflection",
+        "week": 11,
+        "year": 2025
+    },
+    {
+        "question": "Diamond turning is generally used for finishing of",
+        "options": [
+            "Cast iron",
+            "Mild steel",
+            "Copper",
+            "Tungsten carbide"
+        ],
+        "correct_answer": "Copper",
+        "week": 11,
+        "year": 2025
+    },
+    {
+        "question": "Two axes with T slide is associated with",
+        "options": [
+            "X-Z axis diamond turning machine",
+            "R-\u03f4 axis diamond turning machine",
+            "X-Y axis diamond turning machine",
+            "Y-Z axis diamond turning machine"
+        ],
+        "correct_answer": "X-Z axis diamond turning machine",
+        "week": 11,
+        "year": 2025
+    },
+    {
+        "question": "In ultra-precision machining, surface finish (Ra) is typically in the range of",
+        "options": [
+            "<10\u00b5m",
+            ">10 \u00b5m",
+            "<20nm",
+            ">20nm"
+        ],
+        "correct_answer": "<20nm",
+        "week": 12,
+        "year": 2025
+    },
+    {
+        "question": "Depth of cut (uncut chip thickness) in ultra-precision machining is in the range of",
+        "options": [
+            "1-10 \u00b5m",
+            "10-100 \u00b5m",
+            "0.1-10 \u00b5m",
+            "0.01-0.1 \u00b5m"
+        ],
+        "correct_answer": "0.1-10 \u00b5m",
+        "week": 12,
+        "year": 2025
+    },
+    {
+        "question": "Material removal rate in the soft loop finishing technique depends on",
+        "options": [
+            "Pressure",
+            "Velocity",
+            "Preston coefficient",
+            "All of the above",
+            "Only (a) and (c)",
+            "Only (b) and (c)"
+        ],
+        "correct_answer": "All of the above",
+        "week": 12,
+        "year": 2025
+    },
+    {
+        "question": "Which one of the following cannot be measured by the tool setting device?",
+        "options": [
+            "X-Z offset of the cutting tool",
+            "Tool nose radius",
+            "Position of the center of the nose radius",
+            "Waviness of the cutting edge"
+        ],
+        "correct_answer": "Waviness of the cutting edge",
+        "week": 12,
+        "year": 2025
+    },
+    {
+        "question": "When machining of concave surface by diamond turning using large nose radius,",
+        "options": [
+            "Small cutting edge length comes into contact with workpiece",
+            "Long cutting edge length comes into contact with workpiece",
+            "Workpiece needs to be rotated at high speed",
+            "Workpiece needs to be rotated at low speed"
+        ],
+        "correct_answer": "Long cutting edge length comes into contact with workpiece",
+        "week": 12,
+        "year": 2025
+    },
+    {
+        "question": "Tool with small nose radius can be used for machining of",
+        "options": [
+            "External feature",
+            "Fragile workpiece",
+            "Hard material",
+            "Composite"
+        ],
+        "correct_answer": "Fragile workpiece",
+        "week": 12,
+        "year": 2025
+    },
+    {
+        "question": "In diamond turning, workpiece is gripped by",
+        "options": [
+            "3 jaws chuck",
+            "4 jaws chuck",
+            "Vacuum chuck",
+            "Self-centric chuck"
+        ],
+        "correct_answer": "Vacuum chuck",
+        "week": 12,
+        "year": 2025
+    },
+    {
+        "question": "What is the sequence of basic composition of a sensing system?",
+        "options": [
+            "Transform -- Sensor -- Signal processing -- Decision making",
+            "Sensor -- Transform -- Decision making -- Signal processing",
+            "Transform -- Sensor -- Decision making -- Signal processing",
+            "Sensor -- Transform -- Signal processing -- Decision making"
+        ],
+        "correct_answer": "Sensor -- Transform -- Signal processing -- Decision making",
+        "week": 12,
+        "year": 2025
+    },
+    {
+        "question": "In which case, the amplitude of AE signal will be high?",
+        "options": [
+            "Crack propagation",
+            "Isotropy",
+            "Plastic deformation",
+            "Ductile failure"
+        ],
+        "correct_answer": "Crack propagation",
+        "week": 12,
+        "year": 2025
+    },
+    {
+        "question": "Which of the following instrument has very high precision level (<1 nm)",
+        "options": [
+            "Accelerometer",
+            "Encoders",
+            "Acoustic emission",
+            "Load cells"
+        ],
+        "correct_answer": "Acoustic emission",
+        "week": 12,
+        "year": 2025
+    }
+]

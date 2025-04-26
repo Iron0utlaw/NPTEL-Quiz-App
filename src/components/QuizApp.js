@@ -563,7 +563,7 @@ export default function QuizApp() {
     );
   };
 
-  const keywordsToBold = ['incorrect', 'not'];
+  const keywordsToBold = [' incorrect ', ' not '];
 
   return (
     <div className="p-4 max-w-md mx-auto">

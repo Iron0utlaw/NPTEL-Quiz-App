@@ -143,6 +143,8 @@ export default function QuizApp() {
     
   
     const deselectAll = () => setSelectedWeeks([]);
+
+    
   
     return (
       <div className="p-4 max-w-md mx-auto">
@@ -550,13 +552,28 @@ export default function QuizApp() {
   if (questions.length === 0)
     return <div className="text-center mt-10">Loading...</div>;
 
+  const highlightKeywords = (text, keywords) => {
+    const parts = text.split(new RegExp(`(${keywords.join('|')})`, 'gi'));
+    return parts.map((part, i) =>
+      keywords.some(kw => kw.toLowerCase() === part.toLowerCase()) ? (
+        <strong className="dark:text-red-400" key={i}>{part}</strong>
+      ) : (
+        part
+      )
+    );
+  };
+
+  const keywordsToBold = ['incorrect', 'not'];
+
   return (
     <div className="p-4 max-w-md mx-auto">
       <div className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-xl shadow p-4">
         <h2 className="text-lg font-semibold mb-2">
           Question {current + 1} of {questions.length}
         </h2>
-        <p className="mb-4">{questions[current].question}</p>
+        <p className="mb-4">
+          {highlightKeywords(questions[current].question, keywordsToBold)}
+        </p>
         <div className="space-y-2">
           {questions[current].options.map((opt, i) => (
             <button

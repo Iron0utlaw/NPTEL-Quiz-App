@@ -45,7 +45,7 @@ export default function QuizApp() {
     const shuffled = shuffleArray([...filtered]).map((q) => ({
       ...q,
       options: 
-        selectedSubject === "mipt" ? shuffleArray([...q.options]) : [...q.options],
+        selectedSubject !== "micromachine" ? shuffleArray([...q.options]) : [...q.options],
     }));
   
     setQuestions(shuffled);
